@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Header component to display the header section of the website.
 export default function Header() {
     return (
         <div>

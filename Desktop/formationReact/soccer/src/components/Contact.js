@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Contact component to display the contact form on the website homepage.
 export default function Contact() {
   return (
     <div>

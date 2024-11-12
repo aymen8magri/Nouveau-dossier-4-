@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Matches component to display the matches section of the website.
 export default function Matches() {
   return (
     <div>

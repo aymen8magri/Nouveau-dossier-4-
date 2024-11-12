@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Home component to display the home page of the website.
 export default function Home() {
   return (
     <div>

@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Single component to display the single page of the website.
 export default function Single() {
   return (
     <div>

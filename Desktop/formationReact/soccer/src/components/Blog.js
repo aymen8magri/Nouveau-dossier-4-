@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Blog component to display the latest blog posts on the website homepage.
 export default function Blog() {
   return (
     <div>

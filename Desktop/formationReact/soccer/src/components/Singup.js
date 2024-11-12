@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Singup component to display the singup section of the website.
 export default function Singup() {
     return (
         <div>

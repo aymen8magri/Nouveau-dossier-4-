@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Login component to display the login page.
 export default function Login() {
   return (
     <div>

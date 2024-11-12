@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Players component to display the players section of the website.
 export default function Players() {
   return (
     <div>
