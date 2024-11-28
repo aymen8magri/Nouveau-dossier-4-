@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="mt-2">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>Photo</th>
+          <th>Marque</th>
+          <th>Modèle</th>
+          <th>Immatriculation</th>
+          <th>Date de circulation</th>
+          <th>Puissance</th>
+          <th>Automatique</th>
+          <th>Accessoires</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (car of cars; track car.id) {
+        <tr>
+          <td><img [src]="car.photo" alt="photo" style="width: 100px; height: 100px;"></td>
+          <td>{{car.infos.marque | uppercase}}</td>
+          <td>{{car.infos.modele}}</td>
+          <td>{{car.infos.immatriculation | immatriculation}}</td>
+          <td>{{car.dateCirculation}}</td>
+          <td>{{car.puissance}}</td>
+          <td>
+            <input type="checkbox" [checked]="car.estAutomatique">
+          </td>
+          <td>
+            <ul>
+              @for (accessoire of car.listAccessoires; track accessoire.propriete) {
+              <li>
+                {{ accessoire.propriete }}:
+                <span class="badge" [ngClass]="{
+                        'bg-warning': accessoire.valeur === 'Oui',
+                        'bg-secondary': accessoire.valeur === 'Non',
+                        'bg-dark': accessoire.valeur !== 'Oui' && accessoire.valeur !== 'Non'
+                      }">
+                  {{ accessoire.valeur }}
+                </span>
+              </li>
+              }
+            </ul>
+          </td>
+        </tr>
+        }
+
+      </tbody>
+    </table>
+  </div>
